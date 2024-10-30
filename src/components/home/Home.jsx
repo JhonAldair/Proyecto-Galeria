@@ -1,5 +1,5 @@
 import Header from "../rmpCbzs/Header.jsx";
-import "../styles/App.css";
+import "../../Styles/App.css"
 import Galimgs from "../rmpCbzs/Galimgs.jsx";
 import { useEffect } from 'react'; // Hook para efectos secund
 

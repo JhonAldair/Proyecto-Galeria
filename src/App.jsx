@@ -3,7 +3,7 @@ import { Suspense, useEffect } from "react";
 import { BrowserRouter as Router, useLocation } from "react-router-dom";
 import { AppRouter } from "./Router"; // Importamos el enrutador principal de la aplicación
 import ReactGA from "react-ga4"; // Importamos Google Analytics para rastrear el tráfico
-import "./components/styles/App.css"; //estilos
+import "./Styles/App.css"; //estilos
 
 //ID de Google Analytics
 const GA_TRACKING_ID = "G-35VLZTPLZ7";
@@ -13,7 +13,7 @@ ReactGA.initialize(GA_TRACKING_ID);
 
 // Componente para rastrear vistas de página en Google Analytics
 const PageViewTracker = () => {
-  const location = useLocation();// Obtenemos la ubicación actual de la ruta
+  const location = useLocation(); // Obtenemos la ubicación actual de la ruta
 
   useEffect(() => {
     // Cada vez que la ruta cambia, enviamos un evento de vista de página a Google Analytics
@@ -32,20 +32,20 @@ function App() {
   const handleInstagram = () => {
     // Función que maneja los eventos de clic en el enlace de Instagram y los envía a Google Analytics
     ReactGA.event({
-      category: 'Social', //categoria del evento
-      action: 'redes',    //accion asociada al evento
-      label: 'Instagram', //etiqueta del evento para identificarlo en Google Analitycs
+      category: "Social", //categoria del evento
+      action: "redes", //accion asociada al evento
+      label: "Instagram", //etiqueta del evento para identificarlo en Google Analitycs
     });
 
-    console.log('Evento instagram enviado a Google Analytics');
+    console.log("Evento instagram enviado a Google Analytics");
   };
 
-  const handleFacebook=()=>{
+  const handleFacebook = () => {
     // Función que maneja los eventos de clic en el enlace de Instagram y los envía a Google Analytics
     ReactGA.event({
-      category: 'Social',
-      action:'redes',
-      label:'Facebook'
+      category: "Social",
+      action: "redes",
+      label: "Facebook",
     });
     console.log("evento facebook enviado a Google Analitycs");
   };
@@ -60,7 +60,11 @@ function App() {
       </Router>
       <footer className="footer">
         <div className="contenido">
-          <a target="_blank" href="https://www.instagram.com/bkmidiacriativa/" onClick={handleInstagram}>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/bkmidiacriativa/"
+            onClick={handleInstagram}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"
@@ -73,7 +77,11 @@ function App() {
             </svg>
             <span>@bkmidiacriativa</span>
           </a>
-          <a href="https://www.facebook.com/bkmidiacriativa" target="_blank" onClick={handleFacebook}>
+          <a
+            href="https://www.facebook.com/bkmidiacriativa"
+            target="_blank"
+            onClick={handleFacebook}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="44"
@@ -91,8 +99,6 @@ function App() {
     </>
   );
 }
-
-
 
 export default App;
 
