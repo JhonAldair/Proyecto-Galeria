@@ -8,5 +8,5 @@ export default defineConfig({
     host: "127.0.0.1",
     port: 5600,
   },
-  base: "/Proyecto-Galeria/",
+  base: "https://JhonAldair.github.io/Proyecto-Galeria",
 });
