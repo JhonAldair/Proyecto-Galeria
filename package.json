@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://jhonaldair.github.io/Proyecto-Galeria",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
